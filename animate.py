@@ -20,6 +20,7 @@ frames = np.linspace(0, nframes, int(time*framerate), dtype=int) # Frame indices
 
 # Define how to animate a frame given the index by replacing the contents of this function. 
 # This is all setup the same way you'd make a normal plot.
+# It'll use index 'i' to choose from your system history.
 def animate(i):
     
     ax.clear() # clear the plot so previous frames don't show up again
@@ -32,5 +33,5 @@ def animate(i):
     fig.tight_layout() # tight layout so it looks nicer (assuming there are things to arrange)
     
 # Create the animation and save to file. Recommend mp4 over gif (faster render and smaller file size), but requires ffmpeg.
-anim = animation.FuncAnimation(fig, animate, frames = frames, interval=1/framerate*1000)
-anim.save('DotAnimation.mp4')
+anim = animation.FuncAnimation(fig, animate, frames = frames, interval=1/framerate*1000) # Don't change this line
+anim.save('DotAnimation.mp4') # Change name to what you want. It'll automatically change file type given appropriate suffix.
