@@ -15,7 +15,6 @@ fig.set_dpi(150.0) # Change this to adjust resolution.
 time = 10 # Time for animation in seconds. Replace with your target time.
 framerate = 30 # Frames per second. Replace with your target rate.
 nframes = len(xhistory)-1 # Total length of list/tuple that contains data. This could be any list/tuple as long as they are all the same size.
-
 frames = np.linspace(0, nframes, int(time*framerate), dtype=int) # Frame indices to use in the animation. Shouldn't need to edit this line.
 
 # Define how to animate a frame given the index by replacing the contents of this function. 
