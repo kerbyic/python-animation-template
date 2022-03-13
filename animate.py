@@ -14,7 +14,7 @@ fig.set_dpi(150.0)
 
 # Setup the framerate and evenly pick frames across the available history for target framerate and time
 time = 10 # time for animation in seconds
-framerate = 144 # frames per second
+framerate = 30 # frames per second
 nframes = len(xhistory)-1 # total number of saved system states
 frames = np.linspace(0, nframes, int(time*framerate), dtype=int) # frame indices to use in the animation
 
